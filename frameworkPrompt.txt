@@ -1,0 +1,25 @@
+help me create a playwright base framework for SaaS application. Any application that needs to implement a playwright framework can simply just clone this repo and get started in 30 seconds.
+Here are the requirements.
+
+1. the framework must be POM compliant
+2. the framework must be SOLID compliant
+3. the framework must be OOPS compliant
+4. the framework must have seperate env files for different environments - dev, staging and production
+5. the folder structure must be clean and consise
+    > there should be a Base pages class
+    > there should be a Base helper class
+    > suggest how test data can be handled
+    > there should be a schema folder to validate API response schema
+    > All Driver logic must be handled in a base class and must support multiple browsers
+    > the test suite must be jenkins and docker ready
+    > suggest how reporting is handled in playwright
+    > help me understand how parallelism is achieved
+    > there should be a base API client where API client is initialised or suggest how playwright handles these api client logic
+    > seperate endpoint yaml must be present to store all the endpoints for apis
+    > Factorybot must be used to maintain api payloads
+6. github actions must run the smoke cases on every push
+7. all industry standards must be followed
+
+
+NOTE: DO NOT ADD ANY CODE unless i explicitly ask to "add code". Guide me on how to build this framework
+
