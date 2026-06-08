@@ -1,33 +1,15 @@
-# API Endpoints Configuration
-# All API endpoints defined in one place
+# Freshsales API Endpoints Configuration
+# All Freshsales CRM API endpoints defined in one place
 
 endpoints:
-  users:
-    getAll: /users
-    getById: /users/{id}
-    create: /users
-    update: /users/{id}
-    delete: /users/{id}
-    search: /users/search
-
-  orders:
-    getAll: /orders
-    getById: /orders/{id}
-    create: /orders
-    update: /orders/{id}
-    delete: /orders/{id}
-    cancel: /orders/{id}/cancel
-
-  products:
-    getAll: /products
-    getById: /products/{id}
-    create: /products
-    update: /products/{id}
-    delete: /products/{id}
-    search: /products/search
-
-  auth:
-    login: /auth/login
-    logout: /auth/logout
-    refresh: /auth/refresh
-    signup: /auth/signup
+  contacts:
+    getAll: /api/contacts
+    getById: /api/contacts/{id}
+    create: /api/contacts
+    update: /api/contacts/{id}
+    delete: /api/contacts/{id}
+    search: /api/search?q={query}&include=contact 
+    getActivities: /api/contacts/{id}/activities
+    getDeals: /api/contacts/{id}/deals
+    convertToAccount: /api/contacts/{id}/convert_to_account
+    upsert: /api/contacts/upsert
