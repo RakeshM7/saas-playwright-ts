@@ -18,7 +18,8 @@ export abstract class BaseAPIClient {
     this.apiRequest = apiRequest
     this.headers = {
       'Content-Type': 'application/json',
-      'Accept': 'application/json'
+      'Accept': 'application/json',
+      'Authorization': `Token token=${config.testApiKey}`
     }
   }
 
