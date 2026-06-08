@@ -12,6 +12,11 @@
 
 - **File-by-file development** — One file at a time with explicit guidance
 - **NO auto-implementation** — Only write code when explicitly requested
+- **Step-by-step line-by-line guidance** — Detailed explanations for each code line:
+  - Why each line exists
+  - What it does
+  - Tables explaining concepts
+  - Visual breakdowns of logic
 - **Always review before proceeding** — Review created files before moving to next
 - **Update all trackers after each file:**
   - CONTEXT.md (session summary)
