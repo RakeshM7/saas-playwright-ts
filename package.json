@@ -1,0 +1,35 @@
+{
+    "name": "playwright-framework",
+    "version": "1.0.0",
+    "description": "Production-ready Playwright test automation framework for SaaS applications",
+    "author": "QA Team",
+    "license": "Proprietary",
+    "private": true,
+    "scripts": {
+        "test": "playwright test",
+        "test:smoke": "playwright test --config=smoke.config.ts",
+        "test:regression": "playwright test --grep @regression",
+        "test:api": "playwright test --grep @api",
+        "test:dev": "ENVIRONMENT=dev playwright test",
+        "test:staging": "ENVIRONMENT=staging playwright test",
+        "test:prod": "ENVIRONMENT=production playwright test",
+        "test:watch": "playwright test --watch",
+        "test:debug": "playwright test --debug",
+        "test:ui": "playwright test --ui",
+        "report": "playwright show-report",
+        "lint": "eslint src tests",
+        "format": "prettier --write \"src/**/*.ts\" \"tests/**/*.ts\"",
+        "clean": "rm -rf dist test-results html-report allure-results"
+    },
+      "devDependencies": {
+        "@playwright/test": "^1.40.0",
+        "@types/node": "^20.0.0",
+        "typescript": "^5.0.0",
+        "eslint": "^8.50.0",
+        "@typescript-eslint/parser": "^6.0.0",
+        "@typescript-eslint/eslint-plugin": "^6.0.0",
+        "prettier": "^3.0.0",
+        "allure-playwright": "^2.9.0"
+    }
+}
+    
