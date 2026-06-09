@@ -21,15 +21,20 @@
         "format": "prettier --write \"src/**/*.ts\" \"tests/**/*.ts\"",
         "clean": "rm -rf dist test-results html-report allure-results"
     },
-      "devDependencies": {
+    "devDependencies": {
         "@playwright/test": "^1.40.0",
-        "@types/node": "^20.0.0",
-        "typescript": "^5.0.0",
-        "eslint": "^8.50.0",
-        "@typescript-eslint/parser": "^6.0.0",
+        "@types/js-yaml": "^4.0.9",
+        "@types/node": "^20.19.42",
         "@typescript-eslint/eslint-plugin": "^6.0.0",
+        "@typescript-eslint/parser": "^6.0.0",
+        "allure-playwright": "^2.9.0",
+        "eslint": "^8.50.0",
+        "js-yaml": "^4.2.0",
         "prettier": "^3.0.0",
-        "allure-playwright": "^2.9.0"
+        "typescript": "^5.0.0"
+    },
+    "dependencies": {
+        "@faker-js/faker": "^9.9.0",
+        "dotenv": "^17.4.2"
     }
 }
-    

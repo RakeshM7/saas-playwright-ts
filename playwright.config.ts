@@ -4,7 +4,8 @@
 // "Main Playwright configuration file.
 // Configures browsers, timeouts, reporters, and artifact capture."
 
-import {defineConfig} from '@playwright/test';
+import {defineConfig, devices} from '@playwright/test';
+import driverConfig from './src/config/driver.config';
 
 /**
  * Main Playwright configuration file.
@@ -67,6 +68,31 @@ export default defineConfig(
 
         // Reporters
         reporter: reporters,
+
+        // Browser configuration with headless setting
+        projects: [
+            {
+                name: 'chromium',
+                use: {
+                    ...devices['chromium'],
+                    headless: driverConfig.launchOptions.headless
+                }
+            },
+            {
+                name: 'firefox',
+                use: {
+                    ...devices['firefox'],
+                    headless: driverConfig.launchOptions.headless
+                }
+            },
+            {
+                name: 'webkit',
+                use: {
+                    ...devices['webkit'],
+                    headless: driverConfig.launchOptions.headless
+                }
+            }
+        ]
     }
 )
 

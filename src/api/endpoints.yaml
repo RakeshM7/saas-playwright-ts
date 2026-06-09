@@ -3,13 +3,13 @@
 
 endpoints:
   contacts:
-    getAll: /api/contacts
-    getById: /api/contacts/{id}
-    create: /api/contacts
-    update: /api/contacts/{id}
-    delete: /api/contacts/{id}
-    search: /api/search?q={query}&include=contact 
-    getActivities: /api/contacts/{id}/activities
-    getDeals: /api/contacts/{id}/deals
-    convertToAccount: /api/contacts/{id}/convert_to_account
-    upsert: /api/contacts/upsert
+    getAll: /contacts
+    getById: /contacts/{id}
+    create: /contacts
+    update: /contacts/{id}
+    delete: /contacts/{id}
+    search: /search?q={query}&include=contact 
+    getActivities: /contacts/{id}/activities
+    getDeals: /contacts/{id}/deals
+    convertToAccount: /contacts/{id}/convert_to_account
+    upsert: /contacts/upsert
