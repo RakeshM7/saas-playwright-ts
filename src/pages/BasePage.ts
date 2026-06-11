@@ -3,7 +3,7 @@ import logger from "../utils/logger"
 import timeouts from "../config/timeout.config"
 
 export class BasePage{
-    private page: Page
+    protected page: Page
     
     constructor(page: Page) {
         this.page = page
@@ -16,12 +16,12 @@ export class BasePage{
 
     async click(locator: Locator) {
         logger.info('Clicked element')
-        await this.page.locator(locator).click()
+        await locator.click()
     }
 
     async fill(locator: Locator, text: string) {
         logger.info(`Filled field with text: ${text}`)
-        await this.page.locator(locator).fill(text)
+        await locator.fill(text)
     }
 
     async isVisible(locator: Locator): Promise<boolean> {
@@ -30,6 +30,14 @@ export class BasePage{
 
     async waitForSelector(locator: Locator, timeout?: number) {
         await this.page.locator(locator).waitFor({ timeout: timeout || timeouts.ASSERTION })
+    }
+
+    async getText(locator: Locator): Promise<string> {
+        return await locator.textContent() || '';
+    }
+
+    async waitForElement(locator: Locator, timeout?: number) {
+        await locator.waitFor({ timeout: timeout || timeouts.ASSERTION });
     }
 
     protected getPage(): Page {
