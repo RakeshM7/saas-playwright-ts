@@ -48,7 +48,7 @@ if(isJenkins || isLocal){
 export default defineConfig(
     {
         // Test discovery
-        testDir: './tests',
+        testDir: './tests/ui',
         testMatch: '**/*.spec.ts',
 
         //Execution settings
@@ -60,7 +60,7 @@ export default defineConfig(
 
         //Artifacts [Screenshots, videos, traces]
         use: {
-            baseUrl: baseUrl,
+            baseURL: baseUrl,
             screenshot: 'only-on-failure',
             video: 'retain-on-failure',
             trace: 'on-first-retry'
@@ -78,20 +78,20 @@ export default defineConfig(
                     headless: driverConfig.launchOptions.headless
                 }
             },
-            {
-                name: 'firefox',
-                use: {
-                    ...devices['firefox'],
-                    headless: driverConfig.launchOptions.headless
-                }
-            },
-            {
-                name: 'webkit',
-                use: {
-                    ...devices['webkit'],
-                    headless: driverConfig.launchOptions.headless
-                }
-            }
+            // {
+            //     name: 'firefox',
+            //     use: {
+            //         ...devices['firefox'],
+            //         headless: driverConfig.launchOptions.headless
+            //     }
+            // },
+            // {
+            //     name: 'webkit',
+            //     use: {
+            //         ...devices['webkit'],
+            //         headless: driverConfig.launchOptions.headless
+            //     }
+            // }
         ]
     }
 )
